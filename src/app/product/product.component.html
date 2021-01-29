@@ -2,6 +2,7 @@
     <img class="card-img-top" [src]="'/assets/' + product.image" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">{{product.name}}</h5>
+      <p class="card-text">{{product.description | slice:0:70}}...</p>
       <h6 class="card-subtitle mb-2 text-muted">{{product.price}} HUF</h6>
       <p class="card-text"><small class="text-muted"></small></p>
     </div>
