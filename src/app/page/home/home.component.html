@@ -1,1 +1,9 @@
-<p>home works!</p>
+<p>DVDs</p>
+
+
+    <div *ngFor="let product of products">
+        {{ product.name }}
+        <img [src]="'/assets/' + product.image">
+    </div>
+    
+
