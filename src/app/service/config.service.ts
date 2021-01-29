@@ -11,12 +11,14 @@ export interface IMenuItem {
 })
 export class ConfigService {
 
-  appName: string = 'Sample Webshop';
+  appName: string = 'DVD Webshop';
 
   menuItems: IMenuItem[] = [
     {text: 'Home', link: '/', icon: 'home'},
-    {text: 'Category01', link: '/cat01'},
-    {text: 'Category02', link: '/cat02'},
+    {text: 'Vígjáték', link: '/cat01'},
+    {text: 'Akció', link: '/cat02'},
+    {text: 'Animaciós', link: '/anim'},
+    {text: 'Horror', link: '/horror'},
   ];
 
   constructor() { }
