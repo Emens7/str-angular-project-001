@@ -1,1 +1,7 @@
-<p>cat01 works!</p>
+<h2>Vígjáték DVD</h2>
+
+
+    <div *ngFor="let product of category">
+        {{ product.name }}
+        <img [src]="'/assets/' + product.image">
+    </div>
