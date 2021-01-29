@@ -37,6 +37,20 @@ export class ProductServiceService {
     .sort(() => Math.random() - 0.5)
     .slice(0, 5);
     return actionFive;
+  };
+
+  animationRandomFive() {
+    const animationFive = this.list.filter(item => item.catId == 16)
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 5);
+    return animationFive;
+  };
+
+  adventureRandomFive() {
+    const adventureFive = this.list.filter(item => item.catId == 12)
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 5);
+    return adventureFive;
   }
 
 }
