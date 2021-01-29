@@ -1,9 +1,16 @@
-<p>DVDs</p>
+<h2>Featured DVDs</h2>
 
 
     <div *ngFor="let product of products">
         {{ product.name }}
         <img [src]="'/assets/' + product.image">
+    </div>
+
+<h2>Discount dvd</h2>
+
+    <div *ngFor="let discount of discounts">
+        {{ discount.name }}
+        <img [src]="'/assets/' + discount.image">
     </div>
     
 

@@ -18,7 +18,9 @@ export class ProductServiceService {
   };
 
   homeRandomFive() {
-
+    const discountFive = this.list.sort(() => Math.random() - 0.5)
+    .slice(0, 5);
+    return discountFive;
   };
 
 }

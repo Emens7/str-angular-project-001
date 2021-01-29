@@ -11,10 +11,13 @@ export class HomeComponent implements OnInit {
 
   products = [];
 
+  discounts = [];
+
   constructor(private productService: ProductServiceService) { }
 
   ngOnInit(): void {
     this.products = this.productService.homeFeaturedFive();
+    this.discounts= this.productService.homeRandomFive();
   }
 
 }
