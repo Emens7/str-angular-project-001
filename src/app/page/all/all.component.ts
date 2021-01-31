@@ -10,10 +10,16 @@ export class AllComponent implements OnInit {
 
   allFilms = [];
 
+  order: string = 'abc';
+
   constructor(private productService: ProductServiceService ) { }
 
   ngOnInit(): void {
     this.allFilms = this.productService.allFilms();
+  }
+
+  orderSelected(event) {
+    this.order = (event.target as HTMLInputElement).value;
   }
 
 }
