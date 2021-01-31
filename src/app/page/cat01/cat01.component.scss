@@ -1,8 +1,7 @@
 @use '../../../assets/colors/colors'as *;
 @import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
 
-body {
-  background-color: $background-color;
+.container {
   height: 100vh;
   width: 100vw;
 }
