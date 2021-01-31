@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductServiceService } from '../../service/product-service.service';
 
 @Component({
   selector: 'app-cat02',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Cat02Component implements OnInit {
 
-  constructor() { }
+  category = [];
+
+  categoryList = [];
+
+  constructor(private productService: ProductServiceService) { }
 
   ngOnInit(): void {
+    this.category = this.productService.actionRandomFive();
+    this.categoryList = this.productService.actionList();
   }
 
 }

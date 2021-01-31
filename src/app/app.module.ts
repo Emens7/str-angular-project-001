@@ -7,6 +7,15 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { Cat01Component } from './page/cat01/cat01.component';
 import { Cat02Component } from './page/cat02/cat02.component';
 import { HomeComponent } from './page/home/home.component';
+import { ProductComponent } from './product/product.component';
+import { ProductlistComponent } from './productlist/productlist.component';
+import { Cat03Component } from './page/cat03/cat03.component';
+import { Cat04Component } from './page/cat04/cat04.component';
+import { ProductbrowserComponent } from './productbrowser/productbrowser.component';
+import { ProductfilterPipe } from './pipe/productfilter.pipe';
+import { AllComponent } from './page/all/all.component';
+import { ProductsortPipe } from './pipe/productsort.pipe';
+import { PropertyfilterPipe } from './pipe/propertyfilter.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +23,16 @@ import { HomeComponent } from './page/home/home.component';
     NavigationComponent,
     Cat01Component,
     Cat02Component,
-    HomeComponent
+    HomeComponent,
+    ProductComponent,
+    ProductlistComponent,
+    Cat03Component,
+    Cat04Component,
+    ProductbrowserComponent,
+    ProductfilterPipe,
+    AllComponent,
+    ProductsortPipe,
+    PropertyfilterPipe
   ],
   imports: [
     BrowserModule,
