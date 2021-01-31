@@ -19,6 +19,7 @@ export class ConfigService {
     {text: 'Akció', link: '/cat02'},
     {text: 'Animaciós', link: '/cat03'},
     {text: 'Kaland', link: '/cat04'},
+    {text: 'Összes', link: '/all'},
   ];
 
   constructor() { }

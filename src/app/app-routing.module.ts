@@ -5,6 +5,7 @@ import { Cat02Component } from './page/cat02/cat02.component';
 import { HomeComponent } from './page/home/home.component';
 import { Cat03Component } from './page/cat03/cat03.component';
 import { Cat04Component } from './page/cat04/cat04.component';
+import { AllComponent } from './page/all/all.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'cat04',
     component: Cat04Component,
+  },
+  {
+    path: 'all',
+    component: AllComponent,
   },
   {
     path: '**',
