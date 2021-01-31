@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ProductServiceService } from '../service/product-service.service';
 
 @Component({
   selector: 'app-productbrowser',
@@ -12,6 +13,7 @@ export class ProductbrowserComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
