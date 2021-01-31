@@ -11,10 +11,13 @@ export class Cat03Component implements OnInit {
 
   category = [];
 
+  categoryList = [];
+
   constructor(private productService: ProductServiceService) { }
 
   ngOnInit(): void {
     this.category = this.productService.animationRandomFive();
+    this.categoryList = this.productService.animationList();
   }
 
 }
