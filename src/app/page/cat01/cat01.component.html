@@ -1,13 +1,9 @@
-<h2>Vígjáték DVD</h2>
-
-
-    <!--<div *ngFor="let product of category">
-        {{ product.name }}
-        <img [src]="'/assets/' + product.image">
-    </div>
-
+<div class="container mt-3">
+    <h2>Vígjátékok</h2>
     <div class="row">
-        <app-product class="col-12 col-md-6 col-lg d-flex mb-3" *ngFor="let product of category" [product]="product"></app-product>
+      <div class="col-12">
+        <app-productlist [products] = "category"></app-productlist>
+      </div>
     </div>
--->  
-<app-productlist [products] = "category"></app-productlist>
+  </div>
+
