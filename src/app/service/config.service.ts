@@ -17,7 +17,7 @@ export class ConfigService {
     {text: 'Home', link: '/', icon: 'home'},
     {text: 'Vígjáték', link: '/cat01'},
     {text: 'Akció', link: '/cat02'},
-    {text: 'Animaciós', link: '/cat03'},
+    {text: 'Animációs', link: '/cat03'},
     {text: 'Kaland', link: '/cat04'},
     {text: 'Összes', link: '/all'},
   ];
