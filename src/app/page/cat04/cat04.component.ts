@@ -10,10 +10,13 @@ export class Cat04Component implements OnInit {
 
   category = [];
 
+  categoryList = [];
+
   constructor(private productService: ProductServiceService ) { }
 
   ngOnInit(): void {
     this.category = this.productService.adventureRandomFive();
+    this.categoryList = this.productService.adventureList();
   }
 
 }

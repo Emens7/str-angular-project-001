@@ -11,6 +11,7 @@ import { ProductComponent } from './product/product.component';
 import { ProductlistComponent } from './productlist/productlist.component';
 import { Cat03Component } from './page/cat03/cat03.component';
 import { Cat04Component } from './page/cat04/cat04.component';
+import { ProductbrowserComponent } from './productbrowser/productbrowser.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { Cat04Component } from './page/cat04/cat04.component';
     ProductComponent,
     ProductlistComponent,
     Cat03Component,
-    Cat04Component
+    Cat04Component,
+    ProductbrowserComponent
   ],
   imports: [
     BrowserModule,
