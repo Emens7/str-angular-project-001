@@ -1,11 +1,5 @@
 <h2>Összes film</h2>
 
-<select (change)="orderSelected($event)" class="form-control form-control mb-4">
-    <option value="abc">ABC szerinti rendezés</option>
-    <option value="ar-novekvo">Ár szerint növekvő rendezés</option>
-    <option value="ar-csokkeno">Ár szerint csökkenő rendezés</option>
-</select>
-
-<app-productbrowser [products] = "allFilms | productsort:order"></app-productbrowser>
+<app-productbrowser [products] = "allFilms"></app-productbrowser>
 
 

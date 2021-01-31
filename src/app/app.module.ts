@@ -15,6 +15,7 @@ import { ProductbrowserComponent } from './productbrowser/productbrowser.compone
 import { ProductfilterPipe } from './pipe/productfilter.pipe';
 import { AllComponent } from './page/all/all.component';
 import { ProductsortPipe } from './pipe/productsort.pipe';
+import { PropertyfilterPipe } from './pipe/propertyfilter.pipe';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ProductsortPipe } from './pipe/productsort.pipe';
     ProductbrowserComponent,
     ProductfilterPipe,
     AllComponent,
-    ProductsortPipe
+    ProductsortPipe,
+    PropertyfilterPipe
   ],
   imports: [
     BrowserModule,

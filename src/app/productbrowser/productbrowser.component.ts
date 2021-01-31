@@ -11,6 +11,8 @@ export class ProductbrowserComponent implements OnInit {
   @Input() products;
 
   searchTerm: string = '';
+  order: string = 'abc';
+  filter: string = 'all';
 
   constructor() { }
 
@@ -20,6 +22,14 @@ export class ProductbrowserComponent implements OnInit {
 
   searchEvent(event: Event): void {
     this.searchTerm = (event.target as HTMLInputElement).value;
+  }
+
+  orderSelected(event) {
+    this.order = (event.target as HTMLInputElement).value;
+  }
+
+  filterSelected(event) {
+    this.filter = (event.target as HTMLInputElement).value;
   }
 
 }
