@@ -11,7 +11,7 @@ export interface IMenuItem {
 })
 export class ConfigService {
 
-  appName: string = 'DVD Webshop';
+  appName: string = 'MPPR DVD WEBSHOP';
 
   menuItems: IMenuItem[] = [
     {text: 'Home', link: '/', icon: 'home'},

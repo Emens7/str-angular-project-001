@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-primary sticky-top">
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+  <img src="../../assets/images/cd-clipart-film-dvd-2.png" alt="DVD">
   <a
     class="navbar-brand"
     routerLink="/"
@@ -22,7 +23,7 @@
     <ul class="navbar-nav mr-auto">
       <li *ngFor="let item of menuItems" class="nav-item">
         <a
-          class="nav-link text-white"
+          class="nav-link text-warning"
           [routerLink]="item.link"
         >{{ item.text }}</a>
       </li>

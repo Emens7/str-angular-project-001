@@ -1,0 +1,26 @@
+@use '../../assets/colors/colors'as *;
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+
+.card {
+    box-shadow: 5px 5px 5px rgb(74, 96, 110);
+}
+.card-title {
+    font-family: "Barlow", sans-serif;
+    color: $nav-color-darker;
+    text-shadow: 1px 1px 0 rgb(69, 69, 69);
+}
+.card-footer {
+    display: flex;
+    justify-content: center;
+}
+.card-subtitle {
+}
+
+.btn {
+    background-color: $nav-color;
+    color: white;
+    box-shadow: 2px 2px 5px rgb(170, 172, 172);
+    &:hover {
+        background-color: darkred;
+    }
+}
