@@ -1,11 +1,11 @@
 <div class="row mb-4">
     <div class="col-md-12">
-        <input type="text"  class="form-control"  placeholder="Keresés">
+        <input type="text" (keyup)="searchEvent($event)" class="form-control"  placeholder="Keresés">
     </div>
 </div>
 
-<div class="row">
-    <app-product class="col-12 col-md-6 col-lg d-flex mb-3" *ngFor="let product of products" [product]="product"></app-product>
+<div class="row row-cols-12 row-cols-md-6 row-cols-lg-5">
+    <app-product class="col d-flex mb-3" *ngFor="let product of products | productfilter: searchTerm" [product]="product"></app-product>
 </div>
 
 

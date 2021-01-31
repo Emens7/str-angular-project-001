@@ -12,6 +12,7 @@ import { ProductlistComponent } from './productlist/productlist.component';
 import { Cat03Component } from './page/cat03/cat03.component';
 import { Cat04Component } from './page/cat04/cat04.component';
 import { ProductbrowserComponent } from './productbrowser/productbrowser.component';
+import { ProductfilterPipe } from './pipe/productfilter.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ProductbrowserComponent } from './productbrowser/productbrowser.compone
     ProductlistComponent,
     Cat03Component,
     Cat04Component,
-    ProductbrowserComponent
+    ProductbrowserComponent,
+    ProductfilterPipe
   ],
   imports: [
     BrowserModule,

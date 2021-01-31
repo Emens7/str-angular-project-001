@@ -10,10 +10,16 @@ export class ProductbrowserComponent implements OnInit {
 
   @Input() products;
 
+  searchTerm: string = '';
+
   constructor() { }
 
   ngOnInit(): void {
     
+  }
+
+  searchEvent(event: Event): void {
+    this.searchTerm = (event.target as HTMLInputElement).value;
   }
 
 }
