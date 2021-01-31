@@ -4,8 +4,28 @@
     </div>
 </div>
 
-<div class="row row-cols-12 row-cols-md-6 row-cols-lg-5">
-    <app-product class="col d-flex mb-3" *ngFor="let product of products | productfilter: searchTerm" [product]="product"></app-product>
+
+<div class="row">
+    <div class="col-md-6 mb-4">
+        <select (change)="orderSelected($event)" class="form-control form-control mb-4">
+            <option value="abc">ABC szerinti rendezés</option>
+            <option value="ar-novekvo">Ár szerint növekvő rendezés</option>
+            <option value="ar-csokkeno">Ár szerint csökkenő rendezés</option>
+        </select>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <select (change)="filterSelected($event)" class="form-control form-control mb-4">
+            <option value="all">Összes film</option>
+            <option value="featured">Kiemelt ajánlat</option>
+            <option value="stock">Raktáron lévő filmek</option>
+        </select>
+    </div>
+
+</div>
+
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-5">
+    <app-product class="col d-flex mb-3" *ngFor="let product of products | productfilter: searchTerm | propertyfilter: filter | productsort:order" [product]="product"></app-product>
 </div>
 
 
