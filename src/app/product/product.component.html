@@ -3,7 +3,7 @@
     <div class="card-body">
       <h5 class="card-title">{{product.name}}</h5>
       <p class="card-text">{{product.description | slice:0:70  }}...</p>
-      <p><span *ngIf="product.stock" class="badge badge-danger">Raktáron</span></p>
+      <p><span *ngIf="product.stock" class="badge badge-warning">Raktáron</span></p>
       <h6 class="card-subtitle mb-2 text-muted">{{product.price}} HUF</h6>
     </div>
     <div class="card-footer">
