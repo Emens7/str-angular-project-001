@@ -11,13 +11,13 @@ export interface IMenuItem {
 })
 export class ConfigService {
 
-  appName: string = 'DVD Webshop';
+  appName: string = 'MPPR DVD WEBSHOP';
 
   menuItems: IMenuItem[] = [
     {text: 'Home', link: '/', icon: 'home'},
     {text: 'Vígjáték', link: '/cat01'},
     {text: 'Akció', link: '/cat02'},
-    {text: 'Animaciós', link: '/anim'},
+    {text: 'Animációs', link: '/anim'},
     {text: 'Horror', link: '/horror'},
   ];
 
