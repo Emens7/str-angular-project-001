@@ -73,5 +73,10 @@ export class ProductServiceService {
     return adventureList;
   }
 
+  allFilms() {
+    const allFilm = this.list.sort((a, b) => a.name.localeCompare(b.name));
+    return allFilm;
+  }
+
 }
 
