@@ -20,6 +20,7 @@ export class ConfigService {
     {text: 'Animációs', link: '/cat03'},
     {text: 'Kaland', link: '/cat04'},
     {text: 'Összes', link: '/all'},
+    {text: 'Admin felület', link: '/admin'},
   ];
 
   constructor() { }

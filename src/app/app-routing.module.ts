@@ -6,6 +6,7 @@ import { HomeComponent } from './page/home/home.component';
 import { Cat03Component } from './page/cat03/cat03.component';
 import { Cat04Component } from './page/cat04/cat04.component';
 import { AllComponent } from './page/all/all.component';
+import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'all',
     component: AllComponent,
+  },
+  {
+    path: 'admin',
+    component: AdminComponent,
   },
   {
     path: '**',

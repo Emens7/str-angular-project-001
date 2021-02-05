@@ -16,6 +16,7 @@ import { ProductfilterPipe } from './pipe/productfilter.pipe';
 import { AllComponent } from './page/all/all.component';
 import { ProductsortPipe } from './pipe/productsort.pipe';
 import { PropertyfilterPipe } from './pipe/propertyfilter.pipe';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { PropertyfilterPipe } from './pipe/propertyfilter.pipe';
     ProductfilterPipe,
     AllComponent,
     ProductsortPipe,
-    PropertyfilterPipe
+    PropertyfilterPipe,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
