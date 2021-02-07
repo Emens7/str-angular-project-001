@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +18,11 @@ import { ProductfilterPipe } from './pipe/productfilter.pipe';
 import { AllComponent } from './page/all/all.component';
 import { ProductsortPipe } from './pipe/productsort.pipe';
 import { PropertyfilterPipe } from './pipe/propertyfilter.pipe';
+import { SinglepageComponent } from './page/singlepage/singlepage.component';
+import { AdminComponent } from './page/admin/admin.component';
+import { ProductdataeditorComponent } from './productdataeditor/productdataeditor.component';
+import { DataRowComponent } from './data/data-row/data-row.component';
+import { DataCellComponent } from './data/data-cell/data-cell.component';
 
 @NgModule({
   declarations: [
@@ -32,11 +39,18 @@ import { PropertyfilterPipe } from './pipe/propertyfilter.pipe';
     ProductfilterPipe,
     AllComponent,
     ProductsortPipe,
-    PropertyfilterPipe
+    PropertyfilterPipe,
+    SinglepageComponent,
+    AdminComponent,
+    ProductdataeditorComponent,
+    DataRowComponent,
+    DataCellComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

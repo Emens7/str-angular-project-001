@@ -1,0 +1,34 @@
+<div class="container">
+
+
+  <div class="row mb-4">
+    <div class="col-md-12">
+        <input type="text" (keyup)="searchEvent($event)" class="form-control"  placeholder="Keresés">
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-6 mb-4">
+        <select (change)="orderSelected($event)" class="form-control form-control mb-4">
+            <option value="abc">ABC szerinti rendezés</option>
+            <option value="ar-novekvo">Ár szerint növekvő rendezés</option>
+            <option value="ar-csokkeno">Ár szerint csökkenő rendezés</option>
+        </select>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <select (change)="filterSelected($event)" class="form-control form-control mb-4">
+            <option value="all">Összes film</option>
+            <option value="featured">Kiemelt ajánlat</option>
+            <option value="stock">Raktáron lévő filmek</option>
+        </select>
+    </div>
+
+</div>
+
+  <app-productdataeditor
+    [cols]="cols"
+    [list]="list | productfilter: searchTerm | propertyfilter: filter | productsort:order"
+  ></app-productdataeditor>
+</div>
