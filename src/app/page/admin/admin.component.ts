@@ -12,6 +12,10 @@ export class AdminComponent implements OnInit {
   cols: any[] = [];
   list: any[] = [];
 
+  searchTerm: string = '';
+  order: string = 'abc';
+  filter: string = 'all';
+
   constructor(
     private productService: ProductServiceService,
     private config: ConfigService
@@ -20,6 +24,18 @@ export class AdminComponent implements OnInit {
   ngOnInit(): void {
     this.list = this.productService.allFilms();
     this.cols = this.config.cols;
+  }
+
+  searchEvent(event: Event): void {
+    this.searchTerm = (event.target as HTMLInputElement).value;
+  }
+
+  orderSelected(event) {
+    this.order = (event.target as HTMLInputElement).value;
+  }
+
+  filterSelected(event) {
+    this.filter = (event.target as HTMLInputElement).value;
   }
 
 }

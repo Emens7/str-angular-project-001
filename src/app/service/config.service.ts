@@ -23,11 +23,11 @@ export class ConfigService {
     {text: 'Admin', link: '/admin'},
   ];
 
-  cols: {key: string, text: string}[] = [
-    {key: 'id', text: 'Azonosító szám'},
-    {key: 'name', text: 'Film címe'},
-    {key: 'catId', text: 'kategória'},
-    {key: 'price', text: 'Ár'},
+  cols: {key: string, text: string, type: string}[] = [
+    {key: 'id', text: 'Id', type:"id"},
+    {key: 'name', text: 'Film címe', type:"text"},
+    {key: 'catId', text: 'kategória', type:"text"},
+    {key: 'price', text: 'Ár', type:"text"},
   ]
 
   constructor() { }

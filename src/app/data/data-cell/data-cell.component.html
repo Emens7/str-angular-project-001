@@ -1,5 +1,10 @@
+<span
+  *ngIf="col.type == 'id'">
+  {{cellValue}}
+</span>
 
   <input
+   *ngIf="col.type != 'id'"
    type="text"
    [(ngModel)]="cellValue"
    class="form-control"
