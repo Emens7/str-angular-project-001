@@ -6,7 +6,8 @@
   <input
    *ngIf="col.type != 'id'"
    type="text"
-   [(ngModel)]="cellValue"
+   [value]="cellValue"
+   (keyup)="changeCellValue($event)"
    class="form-control"
   >
 

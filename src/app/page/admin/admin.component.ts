@@ -2,6 +2,7 @@ import { ProductServiceService } from './../../service/product-service.service';
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from '../../service/config.service';
 import { Subscription } from 'rxjs';
+import { Product } from '../../model/product';
 
 @Component({
   selector: 'app-admin',
@@ -34,6 +35,20 @@ export class AdminComponent implements OnInit {
 
   ngOnDestroy() {
     this.listSubscription.unsubscribe();
+  }
+
+  onUpdate(row: Product): void {
+
+    this.productService.update('movies', row);
+  }
+
+  onDelete(row: Product): void {
+
+    this.productService.delete('movies', row);
+  }
+
+  onCreate(row: any): void {
+    this.productService.create('movies', row);
   }
 
   searchEvent(event: Event): void {
