@@ -10,11 +10,29 @@ export class ProductServiceService {
 
   serverUrl: string = "http://localhost:3000"
 
-
-
   constructor(
     private http: HttpClient
   ) { }
+
+  update(dataType: string, row: any): void {
+    let url = `${this.serverUrl}/${dataType}/${row.id}`;
+    console.log(url)
+    this.http.put(url, row)
+      .forEach(response => this.getAllMovie());
+  }
+
+  delete(dataType: string, row: any): void {
+    let url = `${this.serverUrl}/${dataType}/${row.id}`;
+    console.log(url)
+    this.http.delete(url)
+      .forEach(response => this.getAllMovie());
+  }
+
+  create(dataType: string, row: any): void {
+    let url = `${this.serverUrl}/${dataType}`;
+    this.http.post(url, row)
+      .forEach(response => this.getAllMovie());
+  }
 
   getAllMovie(): Observable<Product[]>
   {

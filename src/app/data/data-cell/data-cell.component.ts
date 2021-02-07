@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-data-cell',
@@ -8,11 +8,17 @@ import { Component, Input, OnInit } from '@angular/core';
 export class DataCellComponent implements OnInit {
 
   @Input() cellValue;
+  @Output() cellValueChange: EventEmitter<any> = new EventEmitter();
   @Input() col;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  changeCellValue(event: Event): void
+  {
+    this.cellValueChange.emit((event.target as HTMLInputElement).value);
   }
 
 }
