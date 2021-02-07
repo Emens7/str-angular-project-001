@@ -20,7 +20,15 @@ export class ConfigService {
     {text: 'Animációs', link: '/cat03'},
     {text: 'Kaland', link: '/cat04'},
     {text: 'Összes', link: '/all'},
+    {text: 'Admin', link: '/admin'},
   ];
+
+  cols: {key: string, text: string, type: string}[] = [
+    {key: 'id', text: 'Id', type:"id"},
+    {key: 'name', text: 'Film címe', type:"text"},
+    {key: 'catId', text: 'kategória', type:"text"},
+    {key: 'price', text: 'Ár', type:"text"},
+  ]
 
   constructor() { }
 }
