@@ -1,0 +1,39 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <td scope="col">{{ cols[0].text}}</td>
+      <td scope="col">{{ cols[1].text}}</td>
+      <td scope="col">{{ cols[2].text}}</td>
+      <td scope="col">{{ cols[3].text}}</td>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of list">
+
+      <td *ngFor="let col of cols">
+        <app-data-cell [cellValue]="row[col.key]"></app-data-cell>
+      </td>
+
+      <td><div class="btn-group">
+            <button
+              (click)="onUpdate('update')"
+              class="btn btn-info">
+              <i class="fa fa-pencil"></i>
+            </button>
+            <button
+              (click)="onRefresh('refresh')"
+              class="btn btn-warning">
+              <i class="fa fa-refresh"></i>
+            </button>
+            <button
+              (click)="onDelete('delete')"
+              class="btn btn-danger">
+              <i class="fa fa-trash"></i>
+            </button>
+          </div>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
