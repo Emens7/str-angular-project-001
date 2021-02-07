@@ -16,8 +16,12 @@ export class Cat03Component implements OnInit {
   constructor(private productService: ProductServiceService) { }
 
   ngOnInit(): void {
-    this.category = this.productService.animationRandomFive();
-    this.categoryList = this.productService.animationList();
+    this.productService.animationRandomFive().then(data => {
+      this.category = data;
+    });
+    this.productService.animationList().then(data => {
+      this.categoryList = data;
+    });
   }
 
 }

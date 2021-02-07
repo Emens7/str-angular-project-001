@@ -13,7 +13,9 @@ export class AllComponent implements OnInit {
   constructor(private productService: ProductServiceService ) { }
 
   ngOnInit(): void {
-    this.allFilms = this.productService.allFilms();
+    this.productService.allFilms().then(data => {
+      this.allFilms = data;
+    });
   }
 
 }

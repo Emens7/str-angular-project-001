@@ -16,8 +16,14 @@ export class HomeComponent implements OnInit {
   constructor(private productService: ProductServiceService) { }
 
   ngOnInit(): void {
-    this.products = this.productService.homeFeaturedFive();
-    this.discounts= this.productService.homeRandomFive();
+
+    this.productService.homeFeaturedFive().then(data => {
+      this.products = data;
+    });
+
+    this.productService.homeRandomFive().then(data => {
+      this.discounts = data;
+    });
   }
 
 }

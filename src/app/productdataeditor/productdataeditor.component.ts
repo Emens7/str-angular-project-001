@@ -12,6 +12,7 @@ export class ProductdataeditorComponent implements OnInit {
   @Input() list: any[];
   @Input() cols: any [];
 
+
   dataList: any = {};
 
   constructor(

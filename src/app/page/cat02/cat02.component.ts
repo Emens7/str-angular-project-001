@@ -15,8 +15,12 @@ export class Cat02Component implements OnInit {
   constructor(private productService: ProductServiceService) { }
 
   ngOnInit(): void {
-    this.category = this.productService.actionRandomFive();
-    this.categoryList = this.productService.actionList();
+    this.productService.actionRandomFive().then(data => {
+      this.category = data;
+    });
+    this.productService.actionList().then(data => {
+      this.categoryList = data;
+    });
   }
 
 }
