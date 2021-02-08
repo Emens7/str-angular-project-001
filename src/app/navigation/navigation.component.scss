@@ -1,0 +1,27 @@
+@use '../../assets/colors/colors'as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+nav {
+    font-family: 'Barlow', sans-serif;
+    background-color: $nav-color;
+    font-size: 1.3rem;
+}
+.navbar-brand {
+    font-size: 2rem;
+    font-family: 'Barlow', sans-serif;
+    color: white;
+    text-shadow: 4px 4px rgb(68, 67, 67);
+}
+.navbar-brand:visited {
+    text-shadow: 1px 1px rgb(68, 67, 67);
+    color: white;
+}
+.navbar-brand:hover {
+    text-shadow: 4px 4px rgb(68, 67, 67);
+    color: rgb(186, 139, 35);
+}
+img {
+    width: 60px;
+    padding-right: 10px;
+}
