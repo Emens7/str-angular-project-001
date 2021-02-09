@@ -1,8 +1,10 @@
 import { ProductServiceService } from './../../service/product-service.service';
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from '../../service/config.service';
-import { Subscription } from 'rxjs';
+import { Subscription, Observable } from 'rxjs';
+import {map, tap} from 'rxjs/operators';
 import { Product } from '../../model/product';
+
 
 @Component({
   selector: 'app-admin',
@@ -12,8 +14,11 @@ import { Product } from '../../model/product';
 export class AdminComponent implements OnInit {
 
   cols: any[] = [];
-  list: any[] = [];
-  listSubscription: Subscription;
+
+  list$: Observable<Product[]> = this.productService.list$.pipe(
+    map((products: Product[]) => products.sort((a, b) => a.name.localeCompare(b.name))
+    )
+  );
 
   searchTerm: string = '';
   order: string = 'abc';
@@ -25,30 +30,26 @@ export class AdminComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.listSubscription = this.productService.getAllMovie().subscribe(
-      list => this.list = list,
-      err => console.error(),
-      () => console.log('unsubscribed')
-    );
+    this.productService.getAllMovie()
     this.cols = this.config.cols;
   }
 
   ngOnDestroy() {
-    this.listSubscription.unsubscribe();
+
   }
 
   onUpdate(row: Product): void {
 
-    this.productService.update('movies', row);
+    this.productService.update(row);
   }
 
   onDelete(row: Product): void {
 
-    this.productService.delete('movies', row);
+    this.productService.delete(row);
   }
 
   onCreate(row: any): void {
-    this.productService.create('movies', row);
+    this.productService.create(row);
   }
 
   searchEvent(event: Event): void {

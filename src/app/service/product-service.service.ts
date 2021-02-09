@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
+
 import { Product } from '../model/product';
 
 @Injectable({
@@ -8,114 +9,39 @@ import { Product } from '../model/product';
 })
 export class ProductServiceService {
 
-  serverUrl: string = "http://localhost:3000"
+  serverUrl: string = "http://localhost:3000";
+  list$: Subject<Product[]> = new Subject();
 
   constructor(
     private http: HttpClient
   ) { }
 
-  update(dataType: string, row: any): void {
-    let url = `${this.serverUrl}/${dataType}/${row.id}`;
-    console.log(url)
-    this.http.put(url, row)
-      .forEach(response => this.getAllMovie());
+  getAllMovie(): void {
+    this.http.get<Product[]>(this.serverUrl + '/movies').subscribe(
+      product => this.list$.next(product)
+    );
   }
 
-  delete(dataType: string, row: any): void {
-    let url = `${this.serverUrl}/${dataType}/${row.id}`;
-    console.log(url)
-    this.http.delete(url)
-      .forEach(response => this.getAllMovie());
+  get(product: Product):Observable<Product> {
+    return this.http.get<Product>(`${this.serverUrl}/movies/${product.id}`)
   }
 
-  create(dataType: string, row: any): void {
-    let url = `${this.serverUrl}/${dataType}`;
-    this.http.post(url, row)
-      .forEach(response => this.getAllMovie());
+  update(product: Product): void {
+    this.http.patch<Product>(`${this.serverUrl}/movies/${product.id}`, product).subscribe(
+      () => this.getAllMovie()
+    )
   }
 
-  getAllMovie(): Observable<Product[]>
-  {
-    return this.http.get<Product[]>(this.serverUrl + '/movies');
+  delete(product: Product): void {
+    this.http.delete<Product>(`${this.serverUrl}/movies/${product.id}`).subscribe(
+      () => this.getAllMovie()
+    )
   }
 
-  async homeFeaturedFive() {
-
-    const list = await this.getAllMovie().toPromise();
-
-    const FeaturedFive = list.filter(item => item.featured == true)
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 5);
-    return FeaturedFive;
-  };
-
-  async homeRandomFive() {
-    const list = await this.getAllMovie().toPromise();
-    const discountFive = list.sort(() => Math.random() - 0.5)
-    .slice(0, 5);
-    return discountFive;
-  };
-
-  async comedyRandomFive() {
-    const list = await this.getAllMovie().toPromise();
-    const comedyFive = list.filter(item => item.catId == 35 && item.featured == true)
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 5);
-    return comedyFive;
-  };
-
-  async comedyList() {
-    const list = await this.getAllMovie().toPromise();
-    const comedyList = list.filter(item => item.catId == 35);
-    return comedyList;
-  }
-
-  async actionRandomFive() {
-    const list = await this.getAllMovie().toPromise();
-    const actionFive = list.filter(item => item.catId == 28 && item.featured)
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 5);
-    return actionFive;
-  };
-
-  async actionList() {
-    const list = await this.getAllMovie().toPromise();
-    const actionList = list.filter(item => item.catId == 28);
-    return actionList;
-  }
-
-  async animationRandomFive() {
-    const list = await this.getAllMovie().toPromise();
-    const animationFive = list.filter(item => item.catId == 16 && item.featured)
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 5);
-    return animationFive;
-  };
-
-  async animationList() {
-    const list = await this.getAllMovie().toPromise();
-    const animationList = list.filter(item => item.catId == 16);
-    return animationList;
-  }
-
-  async adventureRandomFive() {
-    const list = await this.getAllMovie().toPromise();
-    const adventureFive = list.filter(item => item.catId == 12 && item.featured)
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 5);
-    return adventureFive;
-  }
-
-  async adventureList() {
-    const list = await this.getAllMovie().toPromise();
-    const adventureList = list.filter(item => item.catId == 12)
-    return adventureList;
-  }
-
-  async allFilms() {
-    const list = await this.getAllMovie().toPromise();
-    const allFilm = list.sort((a, b) => a.name.localeCompare(b.name));
-    return allFilm;
+  create(product: Product): void {
+    this.http.post<Product>(this.serverUrl, product).subscribe(
+      ()=> this.getAllMovie()
+    );
   }
 
 }

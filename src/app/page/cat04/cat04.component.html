@@ -1,5 +1,5 @@
 <h2>Kiemelt kaland filmek</h2>
-<app-productlist [products] = "category"></app-productlist>
+<app-productlist [products] = "category$ | async"></app-productlist>
 
 <h2>Összes kaland film</h2>
-<app-productbrowser [products] = "categoryList"></app-productbrowser>
+<app-productbrowser [products] = "categoryList$ | async"></app-productbrowser>

@@ -1,5 +1,6 @@
 <h2>Kiemelt ajánlatunk:</h2>
-<app-productlist [products] = "products"></app-productlist>
+<app-productlist [products] = "products$ | async"></app-productlist>
 
 <h2>Akciós kínálatunk:</h2>
-<app-productlist [products] = "discounts"></app-productlist>
+
+<app-productlist [products] = "discounts$ | async"></app-productlist>
