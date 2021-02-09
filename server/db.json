@@ -127,7 +127,7 @@
       "name": "007 - Halálvágta",
       "description": "Max Zorin a komputerbáró nem elégszik meg azzal, hogy milliárdokat keressen a számítástechnikai piacon. Azt akarja, hogy cége legyen az egyetlen meghatározó erő az új iparágban. Ebben már csak a konkurencia, a kaliforniai Szilikon-völgyben virágzó high-tech üzemek akadályozzák, de talán már nem sokáig. Zorin azt tervezi, hogy az egyébként is veszélyeztetett környéken mesterségesen idéz elő olyan nagyerejű földrengést, amely pillanatok alatt elpusztítja a Szilikon-völgyet. James Bond indul Zorin megállítására.",
       "image": "images/e47875c7-f816-4263-86e7-99e4b6cc95da.jpg",
-      "price": "4500",
+      "price": "4700",
       "stock": true,
       "featured": true,
       "active": true
@@ -261,17 +261,6 @@
       "image": "images/9104ea5b-5540-43fc-92ea-16c936a56628.jpg",
       "price": 2500,
       "stock": true,
-      "featured": false,
-      "active": true
-    },
-    {
-      "id": 1817,
-      "catId": 53,
-      "name": "A fülke",
-      "description": "Megcsörren egy utcai telefon, egy férfi felveszi. És majdnem belehal. És örökre megváltozik az élete. Mert egy mesterlövész hívja, aki a környező toronyházak egyik ablakából éppen rá céloz. Rég vadászik a férfira, mindent tud róla, ismeri a feleségét, a szeretőjét, a titkait és a vágyait. Beszélgetni akar a férfi bűneiről: büntet és jutalmaz. Habozás nélkül öl és pontosan céloz. A férfi nem teheti le a telefont, csak vár és válaszol. Szeretné túlélni ezt a hívást; szeretne túljárni a lesipuskás eszén. Közben megérkezik a rendőrség, vezetőjük tárgyalni kezd a férfival, akinek a fülkéje előtt egy halott hever. Azt hiszi, ő a tettes. Nem ért semmit. És az a nyugodt, kegyetlen hang a telefonban, egyre újabb követelésekkel áll elő. És a férfi nem teheti le a kagylót még akkor sem, ha rendőrök tucatjai szegezik rá a fegyvert.",
-      "image": "images/d955c5d4-eff3-492f-ba7b-50361e45fee6.jpg",
-      "price": 5500,
-      "stock": false,
       "featured": false,
       "active": true
     },
@@ -562,17 +551,6 @@
       "active": true
     },
     {
-      "id": 12100,
-      "catId": 18,
-      "name": "A fegyverek szava",
-      "description": "A második világháborúban sajátos eszközhöz folyamodott az amerikai hírszerzés a csendes-óceáni hadszíntéren. Navajo indián tengerészgyalogosakat képeztek ki rádiósoknak, akik a bonyolult kódolás helyett a saját anyanyelvükön továbbították a parancsokat. Joe Enders és Ox Anderson tengerészgyalogost két indián, Ben Yahzee és Charlie Whitehorse személyes védelmével bízzák meg. A kezdeti ellenérzés után, a Szaipan-sziget elleni támadás során a katonák között baráti kapcsolat alakul ki. Lassanként ráébrednek, mit jelent valójában ez a feladat.",
-      "image": "images/18687ada-d3b3-41c6-a05c-e7bc616c056c.jpg",
-      "price": 5500,
-      "stock": true,
-      "featured": false,
-      "active": true
-    },
-    {
       "id": 238,
       "catId": 18,
       "name": "A keresztapa",
@@ -739,7 +717,7 @@
     },
     {
       "id": 3683,
-      "catId": 10752,
+      "catId": "35",
       "name": "A dicsőség zászlaja",
       "description": "A második világháború egyik legismertebb képét Ivo Dzsima szigetén készítették 1945 februárjában. Hat tengerészgyalogos közös erővel tűzi ki az amerikai zászlót az elfoglalt szigeten. Közülük hárman később elestek, három társuk végül hazajutott, de nem szívesen váltak a háború utáni propaganda eszközévé. Bradley őrmester sosem beszélt a hőstettéről, csendesen élt, és idős korában halt meg. A fia, John csak a temetése után tudja meg, hogy milyen esemény részese volt az apja. Nyomozni kezd, hogy megtudja, mi történt azon a napon Ivo Jimán.",
       "image": "images/5d321dad-062a-4986-b418-209ae9132711.jpg",
