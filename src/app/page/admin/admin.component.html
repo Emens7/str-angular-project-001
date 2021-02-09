@@ -27,7 +27,7 @@
 
   <app-productdataeditor
     [cols]="cols"
-    [list]="list | productfilter: searchTerm | propertyfilter: filter | productsort:order"
+    [list]="list$ | async | productfilter: searchTerm | propertyfilter: filter | productsort:order"
     (create)="onCreate($event)"
     (update)="onUpdate($event)"
     (delete)="onDelete($event)"

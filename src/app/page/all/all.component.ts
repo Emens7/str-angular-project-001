@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductServiceService } from '../../service/product-service.service';
+import { Product } from '../../model/product';
+import { Observable } from 'rxjs';
+import {map, tap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-all',
@@ -8,14 +11,15 @@ import { ProductServiceService } from '../../service/product-service.service';
 })
 export class AllComponent implements OnInit {
 
-  allFilms = [];
+  allFilms$: Observable<Product[]> = this.productService.list$.pipe(
+    map((products: Product[]) => products.sort((a, b) => a.name.localeCompare(b.name))
+    )
+  );
 
   constructor(private productService: ProductServiceService ) { }
 
   ngOnInit(): void {
-    this.productService.allFilms().then(data => {
-      this.allFilms = data;
-    });
+    this.productService.getAllMovie();
   }
 
 }
